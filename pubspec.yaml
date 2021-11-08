@@ -2,8 +2,9 @@ name: vschttpd
 description: |
   Local development server with support for running
   flutter web application in vscode webview extensions
-
-version: 1.0.0
+repository: https://github.com/zoocityboy/vschttpd
+issue_tracker: https://github.com/zoocityboy/vschttpd/issues
+version: 1.0.0+1
 environment:
   sdk: ">=2.14.0 <3.0.0"
 

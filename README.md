@@ -1,4 +1,4 @@
-![VSCHTTPD](/media/artboard.png)
+![VSCHTTPD](https://raw.githubusercontent.com/zoocityboy/vschttpd/main/media/artboard.png?token=ATOW7I4NWM5UANKPMOSPHD3BREQAS)
 
 # VSCHTTPD
 
