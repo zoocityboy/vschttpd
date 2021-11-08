@@ -16,20 +16,18 @@ pub global activate vschttpd
 inside a flutter app run 
 
 ```bash
-vschttpd --port YOURPORT --path build/web --address localhost
+vschttpd -p YOURPORT -r build/web
 ```
 
 ## Configure
 
 ```bash
 vschttpd --help
-FormatException: Could not find an option named "help".
--p, --port       Port to listen on.
-                 (defaults to "9001")
--r, --path       Path to serve.
-                 (defaults to "C:\Users\zooci\Develop\hci\self-care-mobile\dynamic_forms_playground")
--a, --address    Address to listen on.
-                 [localhost, 127.0.0.1 (default), ::1]
+-p, --port                Port to listen on.
+                          (defaults to "9001")
+-r, --root (mandatory)    The path to serve. If not set, the current directory is used.
+-a, --address             Address to listen on.
+                          (defaults to "localhost")
 ```
 
 
