@@ -27,11 +27,13 @@ class VscHttpDeamon {
 
     final pipeline = const Pipeline()
         .addMiddleware(logRequests())
-        .addMiddleware(corsHeadersMiddleware())
+        .addMiddleware(corsHeadersMiddleware(port: port))
         .addHandler(createStaticHandler(path, defaultDocument: 'index.html'));
     final server = await io.serve(pipeline, address, port);
     server.defaultResponseHeaders.remove('X-Content-Type-Options', 'nosniff');
     server.defaultResponseHeaders.remove('x-content-type-options', 'nosniff');
+    server.defaultResponseHeaders
+        .add('x-frame-options', 'ALLOW-FROM http://localhost:$port');
     return VscHttpDeamon._(server, path);
   }
 
